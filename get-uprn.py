@@ -1,13 +1,15 @@
 import requests
-
-from requests.api import options, post
+import re
 
 def get_postcode():
     postcode = input("Please enter your postcode: ")
-
-    postcode.replace(' ', '') # Removes spaces in postcode
-    postcode.capitalize() # For convention really.
-    return postcode
+    if re.match(r'^[A-Za-z]{1,2}[0-9][A-Z0-9a-z]? ?[0-9][A-Za-z]{2}$', postcode):
+        postcode.replace(' ', '') # Removes spaces in postcode
+        postcode.capitalize() # For convention really.
+        return postcode
+    else:
+        print("The postcode you entered '{}' is not valid.".format(str(postcode)))
+        get_postcode()
 
 def get_addresses(postcode):
     addresses = requests.get('https://addresses.york.gov.uk/api/address/lookupbypostcode/{}'.format(postcode)).json()
