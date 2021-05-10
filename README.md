@@ -6,7 +6,7 @@
 `https://addresses.york.gov.uk/api/address/lookupbypostcode/<POSTCODE>` 
 - The postcode element has no space.
 #### Response
-A list of addresses belonging to that postcode. With associated metadata of their addresses.
+A list of addresses belonging to that postcode. With associated metadata of their addresses.  
 Example response: from `https://addresses.york.gov.uk/api/address/lookupbypostcode/YO17DP`
 ```json
 [
@@ -33,7 +33,7 @@ Example response: from `https://addresses.york.gov.uk/api/address/lookupbypostco
 There are several values however the important one is the `uprn` (unique property resource number). I will eventually write a script that allows you to input your postcode in order to get your `uprn`.
 ### Next Waste Lookup 
 #### Endpoint
-This endpoint returns the two **next** dates that waste will be collected.
+This endpoint returns the two **next** dates that waste will be collected.  
 `https://waste-api.york.gov.uk/api/GetBinCollectionDataForUprn/<uprn>`
 #### Response
 ```json
@@ -63,7 +63,7 @@ This endpoint returns the two **next** dates that waste will be collected.
 As you can see the timezones are nicely parsed in the ISO-8601 standard which makes them very easy to understand.
 ### Calendar Waste Lookup
 #### Endpoint
-This endpoint returns much more inadvance collections. When performing this request on 2021-05-10 it had requests stretching to 2021-11-29.
+This endpoint returns much more inadvance collections. When performing this request on 2021-05-10 it had requests stretching to 2021-11-29.  
 `https://waste-api.york.gov.uk/api/GetBinCalendarDataForUprn/<uprn>`
 #### Response
 Some responses have been omitted.
