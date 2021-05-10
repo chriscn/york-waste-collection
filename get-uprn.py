@@ -6,6 +6,7 @@ def get_postcode():
     postcode = input("Please enter your postcode: ")
 
     postcode.replace(' ', '') # Removes spaces in postcode
+    postcode.capitalize() # For convention really.
     return postcode
 
 def get_addresses(postcode):
