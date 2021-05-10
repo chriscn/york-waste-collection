@@ -1,4 +1,5 @@
 .vscode/
+*.ics
 .DS_Store
 venv/
 *.log
