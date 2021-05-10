@@ -6,7 +6,7 @@
 - The postcode element has no space.
 #### Response
 A list of addresses belonging to that postcode. With associated metadata of their addresses.  
-Example response: from `https://addresses.york.gov.uk/api/address/lookupbypostcode/YO17DP`
+`https://addresses.york.gov.uk/api/address/lookupbypostcode/YO17DP`
 ```json
 [
   {
